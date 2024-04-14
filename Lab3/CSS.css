@@ -1,0 +1,14 @@
+.Subtitulo{
+    font-size: 4rem;
+    color: #3697b7;
+    font-family: arial;
+    text-align: center;
+}
+
+
+.imagenes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
