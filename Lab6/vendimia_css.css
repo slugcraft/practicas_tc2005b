@@ -9,7 +9,14 @@
 }
 
 #selector{
-    text-align: center;
-    width: 60%;
+    text-align: center; 
+    color: white; 
+    background-color: rgb(23,23,25); 
+    border: 0; 
+    font-weight: bold;
+    font-size: medium;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    
 }
-

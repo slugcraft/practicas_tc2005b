@@ -39,9 +39,11 @@ function mostrarInfo(){
 
             input.type="text";
             input.id="entrada";
+            input.style="background-color: gray; border-color: white;";
             change.appendChild(input);
 
             boton.textContent="Agregar al carrito";
+            boton.style="background-color: rgb(23,23,25); border-color: white; color:white;"
             boton.addEventListener("click", () =>{
                 let tabla = document.getElementById("tabla").getElementsByTagName("tbody")[0];
                 let nuevaFila = document.createElement("tr");
@@ -104,9 +106,11 @@ function mostrarInfo(){
 
             input.type="text";
             input.id="entrada";
+            input.style="background-color: gray; border-color: white;";
             change.appendChild(input);
-            
+
             boton.textContent="Agregar al carrito";
+            boton.style="background-color: rgb(23,23,25); border-color: white; color:white;"
             boton.addEventListener("click", () =>{
                 let tabla = document.getElementById("tabla").getElementsByTagName("tbody")[0];
                 let nuevaFila = document.createElement("tr");
@@ -169,9 +173,11 @@ function mostrarInfo(){
 
             input.type="text";
             input.id="entrada";
+            input.style="background-color: gray; border-color: white;";
             change.appendChild(input);
-            
+
             boton.textContent="Agregar al carrito";
+            boton.style="background-color: rgb(23,23,25); border-color: white; color:white;"
             boton.addEventListener("click", () =>{
                 let tabla = document.getElementById("tabla").getElementsByTagName("tbody")[0];
                 let nuevaFila = document.createElement("tr");
