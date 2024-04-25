@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.3.0, for macos14.2 (arm64)
 --
--- Host: localhost    Database: Lab9
+-- Host: localhost    Database: Lab6
 -- ------------------------------------------------------
 -- Server version	11.3.2-MariaDB
 
@@ -120,7 +120,7 @@ INSERT INTO `PROYECTO` VALUES (5000,'Vamos Mexico'),(5001,'AztecÛn'),(5002,'CIT
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'Lab9'
+-- Dumping routines for database 'Lab6'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -132,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-20 23:50:54
+-- Dump completed on 2024-04-25  7:47:33
