@@ -31,11 +31,11 @@ const server = http.createServer( (request, response) => {
                     console.log(indice);
                     const imprimir = body.split('&')[1].split('=')[1];
                     console.log(imprimir);
-                
-                    for(var i = 1; i <= indice; i++){
-                        console.log(imprimir)
-                    }
-                
+
+                    let cadena = indice + " " + imprimir;
+                    
+                    fs.writeFileSync('texto.txt', cadena);
+
                     response.setHeader('Content-Type', 'application/json');
                     response.statusCode = 200;
                     response.write('{code:200, msg:"Ok POST"}');
