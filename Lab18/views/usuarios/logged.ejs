@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <%- include('./../css.ejs') %>
+    </head>
+    <body>
+        <h1>Gracias por iniciar sesión!</h1>
+        <p><%= user.username %></p>
+        <p><%= user.name %></p>
+        <p><%= user.password %></p>
+        <p>Además de las credenciales tradicionales (como nombre de usuario y contraseña), existen varias formas de autenticación que pueden ser utilizadas en sistemas de login para mejorar la seguridad y la experiencia del usuario. Algunos ejemplos son:</p>
+        <ol>
+            <li>Autenticación de dos factores (2FA): Requiere que el usuario proporcione dos formas de verificación diferentes antes de acceder, como una contraseña y un código generado por una aplicación de autenticación en el teléfono del usuario.</li>
+            <li>Autenticación biométrica: Utiliza características físicas únicas del usuario, como huellas dactilares, reconocimiento facial o escaneo de iris, para verificar su identidad.</li>
+            <li>Autenticación basada en tokens: Utiliza tokens únicos generados y validados por un servidor para permitir el acceso. Esto puede incluir tokens de sesión, tokens JWT (JSON Web Tokens) o tokens OAuth.</li>
+            <li>Autenticación de terceros: Permite a los usuarios autenticarse utilizando credenciales de cuentas existentes en plataformas de terceros, como Google, Facebook, Twitter, etc.</li>
+            <li>Autenticación de dispositivo: Verifica la identidad del usuario basándose en el dispositivo que están utilizando para acceder al sistema, como mediante el uso de certificados de dispositivo.</li>
+            <li>Autenticación sin contraseña: Utiliza métodos alternativos para autenticar al usuario sin requerir una contraseña, como el envío de un enlace de autenticación por correo electrónico o SMS.</li>
+        </ol>
+    </body>
+    <%- include('./../scripts.ejs') %>
+</html>
