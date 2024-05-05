@@ -16,6 +16,40 @@
             <br><br>
             <input class="button is-success" type="submit" value="<% if (registro) { %>¡Unirme!<% } else { %>Entrar<% } %>">
         </form>
+
+        <p>¿En qué consiste el control de acceso basado en roles?</p>
+        <p>Es un sistema de permisos basado en los roles que desempeñan los usuarios en la empresa, apartir de este rol se habilitan o limitan ciertas funciones o accesos en la pagina de una manera estructurada</p><br>
+        <p>Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y desventajas de cada uno con respecto al control de acceso.</p>
+        <ul>
+            <li>Con RRAC: una pagina de venta de merch</li>
+            <ul>
+                <li>Ventajas:</li>
+                <ul>
+                    <li>El sistema basado en roles simplifica la gestión de permisos al asignar roles predefinidos a los usuarios en función de sus responsabilidades</li>
+                    <li>Al limitar el acceso permisos específicos se reduce el riesgo de acceso no autorizado y se mejora la seguridad del sistema</li>
+                    <li>Al ser un sistema estructurado, se puede añadir nuevos roles en funcionalidad del crecimiento de la empresa</li>
+                </ul>
+                <li>Desventajas:</li>
+                <ul>
+                    <li>Su diseño tiene que ser perfectamente definido, pues si no hay una estructura clara con los permisos puede volverse ineficaz</li>
+                    <li>Puede resultar difícil adaptarse a situaciones donde los roles predefinidos no cubren todas las necesidades necesarias</li>
+                </ul>
+            </ul>
+
+            <li>Sin RRAC: un manejador de archivos en un SO</li>
+            <ul>
+                <li>Ventajas:</li>
+                <ul>
+                    <li>Al no estar restringido por roles es más flexible la funcionalidad desde cualquier usuario, pues se comparten todos los permisos y accesos</li>
+                    <li>Es sencillo de entender la estructura de los usuarios y que pueden hacer</li>
+                </ul>
+                <li>Desventajas:</li>
+                <ul>
+                    <li>La falta de roles predefinidos puede aumentar el riesgo de errores de configuración y accesos no autorizados si no se gestionan adecuadamente los permisos</li>
+                    <li>Se crea una carencia de jerarquia y estructura de los que pueden manejar los archivos y sus contenidos</li>
+                </ul>
+            </ul>
+        </ul>
     </body>
     <%- include('./../scripts.ejs') %>
 </html>
