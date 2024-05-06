@@ -21,7 +21,17 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+/*  ------PREGUNTAS A RESPONDER-------
+¿Qué beneficios encuentras en el estilo MVC?
+    La mayor ventaja que tiene el modelo vista-controlador es la segmentacion que hay en los 3 componentes, siendo que la vista separa la interfaz,
+    el modelo la parte de los datos y el controlador como intermediario, todo esto nos ayuda a tener un aislamiento en el codigo que nos facilita el mantenimiento al
+    igual que nos ayuda a reutilizar codigo.
 
+¿Encuentras alguna desventaja en el estilo arquitectónico MVC?
+    Puede llegar a ocurrir una sobre carga de controladores en paginas que tengan un gran manejo logico de datos, lo que puede dificultar el mantenimiento de los mismos; del
+    lado contrario el MVC no resulta muy util en aplicaciones pequeñas pues puede ser inecesario y añade una complejidad mas grande al codigo.
+
+*/
 app.get('/', (request, response, next) => {
     response.setHeader('Content-Type', 'text/plain');
     response.send("Hola Mundo");
