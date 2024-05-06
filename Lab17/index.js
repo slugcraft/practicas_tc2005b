@@ -15,6 +15,21 @@ const pool = mariadb.createPool({
     connectionLimit:5
 });
 
+/*------Preguntas a responder-------
+¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?
+    Nos ayuda a reutilizar y a simplificar el codigo, pues al segmentar en capaz el codigo es facil de darle mantenimiento y de comprender su complejidad y
+    de esta manera no tenemos consultas de sql repartidas a lo largo de nuestro codigo.
+
+¿Qué es SQL injection y cómo se puede prevenir?
+    El SQL injection es un tipo de ataque cibernético en una aplicación web el cual consta en insertar código SQL malicioso en las consultas SQL que se ejecutan en la base de datos. 
+    Esto puede permitir que se manipule la base de datos, acceder a información confidencial, modificar datos o incluso eliminar datos.
+
+    Esto se puede prevenir teniendo verificadores en los envios de los formularios que interactuan con la base de datos, como puede ser hacer una lista negra con
+    los querys de sql para que los usuarios no puedan realizar modificaciones al discriminar las palabras reservadas.
+
+
+*/
+
 app.get('/test_db', async(request, response, next) => {
     let conn;
 
