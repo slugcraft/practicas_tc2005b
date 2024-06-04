@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX Consumption</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>AJAX consumption</h1>
+
+      <div id="productos-container"></div>
+
+      <h2>Save Product</h2>
+
+      <form id="myForm">
+        <input type="number" id="id" name="id" placeholder="Id"></input>
+        <input type="text" id="name" name="name" placeholder="Name"></input>
+        <input type="number" id="price" name="price" step="any" placeholder="Price"></input>
+        <input type="submit" id="submitButton"></input>
+      </form>
+      <button id="updateProducts">Update Products</button>
+      <code id="codeResult"></code>
+      <div id="wrapper"></div>
+
+      <h3>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?</h3>
+      <p>AJAX es muy util en el desarrollo de Rich Internet Applications (RIA) porque permite actualizar partes específicas de la página sin tener que recargarla, proporcionando una experiencia más fluida y receptiva. Esto mejora la interactividad, velocidad y eficiencia de las aplicaciones, permitiendo funcionalidades avanzadas como autocompletado y validación en tiempo real. Además, su compatibilidad con  formatos de datos facilita la integración con múltiples servicios web y APIs.</p><br>
+      <h3>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</h3>
+      <p>AJAX introduce varias implicaciones de seguridad, como la exposición de APIs, vulnerabilidades a ataques XSS y CSRF, e inyecciones de código. Es crucial realizar validaciones de seguridad tanto del lado del cliente como del servidor: las del cliente mejoran la usabilidad con retroalimentación inmediata, pero pueden ser eludidas, mientras que las del servidor son esenciales para prevenir ataques y proteger la integridad de la aplicación, asegurando que todas las entradas sean validadas y sanitizadas adecuadamente.</p><br>
+      <h3>¿Qué es JSON?</h3>
+      <p>JSON es un formato ligero y basado en texto para el intercambio de datos, fácil de leer y escribir tanto para humanos como para máquinas. Utiliza una estructura sencilla de pares clave-valor y listas ordenadas, y es independiente del lenguaje de programación, lo que lo hace compatible con muchas tecnologías. JSON se emplea comúnmente para transmitir datos entre servidores y aplicaciones web debido a su simplicidad y eficiencia.</p>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+</html>
