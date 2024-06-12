@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-template-rows: repeat(10, 50px);
+            gap: 5px;
+            margin: 20px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            background-color: #00f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            cursor: pointer;
+        }
+        .hit {
+            background-color: #f00;
+        }
+        .miss {
+            background-color: #ccc;
+        }
+        .ship{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Battleship Game</h1>
+    <%if (jugador){%>
+        <h3><%=mensaje%></h3>
+        <h3>Jugador <%=jugador%> coloca tus barcos</h3>
+    <%}%>
+    <div class="grid" id="grid">
+    </div>
+    <div name="barcos" id="barcos"></div>
+    <button id="sig" style="display: none; background-color:orange;" href="/game/turn">Sig jugador</button>
+    <script>
+        const grid = document.getElementById('grid');
+        const sig = document.getElementById('sig');
+
+        var contador = 0;
+
+        var shipPositions = [
+            { x: 0, y: 0 },
+            { x: 0, y: 0 },
+            { x: 0, y: 0 },
+            { x: 0, y: 0 },
+            { x: 0, y: 0 },
+            { x: 0, y: 0 }
+        ];
+
+        // Generate grid cells
+        for (let row = 0; row < 10; row++) {
+            for (let col = 0; col < 10; col++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.dataset.row = row;
+                cell.dataset.col = col;
+                cell.addEventListener('click', handleCellClick);
+                grid.appendChild(cell);
+            }
+        }
+
+        function handleCellClick(event) {
+            if(contador < 6){
+                const cell = event.target;
+                const row = parseInt(cell.dataset.row);
+                const col = parseInt(cell.dataset.col);
+
+                shipPositions[contador] = { x: row, y: col};
+                contador++;
+                    
+                cell.classList.add('ship');
+                cell.textContent = '#';
+                
+                // Disable further clicks on this cell
+                cell.removeEventListener('click', handleCellClick);
+            }else{
+                const barcos = document.getElementById('barcos');
+                barcos.value = shipPositions;
+                alert("Has colocado tus barcos, ahora le toca al otro jugador");
+            }
+        }
+    </script>
+</body>
+</html>
